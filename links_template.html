@@ -1,0 +1,319 @@
+<html>
+    <head>
+        <!--META DATA-->
+        <!--this is what makes your website/page discoverable in search engines-->        
+        <!--basic meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>YOUR NAME HERE</title>
+
+        <meta name="description" content="This is my website, find me anywhere from here." />
+        <meta name="keywords" content="contact, blog, portfolio, dolls" />
+        <meta name="author" content="YOUR NAME" />
+
+        <!-- Open Graph Meta Tags-->
+        <meta property="og:title" content="YOUR SITE NAME">
+        <meta property="og:locale" content="en_UK" />
+        <meta property="og:description" content="This is my website, find me anywhere from here.">
+        <meta property="og:image" content="/img/previewcard.png"> <!--ever link something, and an image shows up? this is what that is. can be whatever you'd like-->
+        <meta property="og:url" content="whatever.yoururl.is">
+        <meta property="og:site_name" content="YOUR SITE NAME" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Meta Tags-->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="YOUR SITE NAME">
+        <meta name="twitter:description" content="This is my website, find me anywhere from here.">
+        <meta name="twitter:image" content="/img/previewcard.png">
+
+        <style>
+        /*THIS IS WHAT MAKES YOUR PAGE SEXY*/
+
+        /*root*/
+        :root {
+            --main: #05c793;
+            --mid: #c7d7e7;
+            --light: #ffce5c;
+            --accent: #ff2155;
+            --text: #000000;
+            --bg: #fff5eb;
+            /*feel free to change this font!*/
+            font-family:'Courier New', Courier, monospace
+        }
+
+        /*color palette from https://www.colorpoint.io/color-palette/overall/ */
+
+        /*this is a little advanced, but root lets you set certain things - such as colors. extremely helpful for mass changes.*/
+
+        body {
+            background-color: var(--bg);
+            /*or if you want a custom image background, delete the above and use the back-image below.*/
+            /*background-image: url();*/
+            color: var(--text); /*now everything marked with --text will change color! no fiddling with everything */
+        }
+
+        /*this places everything in the middle*/
+
+        .container {
+            flex: 1 0 auto;
+            width: 100%;
+            height: 100%;
+            padding-left:15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        /*DO NOT TOUCH*/
+
+        .parent {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .img {
+            border-radius: 20px;
+            max-width: 100%;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-style: solid;
+            border-color: var(--light);
+            position: relative;
+            margin: auto;
+            top:0;
+            left:0;
+        }
+
+        .icon {
+            border-radius: 100%;
+            width:150px;
+            max-width: 150px;
+            height:150px;
+            object-fit: cover;
+            border: var(--light) solid 4px;
+            position: absolute;
+            top:50%;
+            left:35%;
+        }
+
+
+        header {
+            margin: auto;
+            margin-top: 10;
+            padding: 2px 10px 7px 10px;
+            max-width: 100%;
+            background-color: var(--main);
+            border-radius: 10px;
+            border: var(--mid) dashed 4px;
+            font-size: 1.2em;
+        }
+
+
+        /*headings*/
+        /*your name*/
+        h1{
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: none;
+            font-size: 2.4em;
+            text-align: center;
+            text-transform: uppercase; /*you can set it to be lowercase, uppercase here*/
+        }
+
+        h2{
+            font-size: 2em;
+            margin: 8px;
+            padding: none;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /*this is the paragraph style*/
+        p {
+            text-align: center;
+            margin: none;
+            padding: none;
+        }
+
+        /*this styles links*/
+
+        a {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+
+        /*this styles the buttons*/
+        .button {
+            margin: 4px;
+            padding: 10px 16px;
+            overflow: hidden;
+            font-size: larger;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            white-space: nowarp;
+            background-color: var(--mid);
+            border-radius: 30px 0px;
+            width: 400px;
+        }
+
+        /*this styles how the buttons look when a mouse hovers over them*/
+        .button:hover{
+            background-color: var(--light);
+            font-style: italic;
+        }
+
+        /*footer + credits*/
+        footer {
+            margin: auto;
+            margin-top: 10px;
+            padding: 8px;
+            width: 200px;
+            height: auto;
+            border: var(--text) 1px dashed;
+            border-radius: 10px;
+            text-align: center;
+            font-size: smaller;
+            font-style: italic;
+        }
+
+        /*MOBILE SIZING*/
+        /*small devices*/
+        @media only screen and (max-width:600px){
+            .container {
+                max-width: 540px;
+            }
+            .links-container {
+                max-width: 540px;
+            }
+            header {
+                max-width: 90%;
+            }
+            .img {
+                max-width: 90%;
+            }
+            .icon {
+                width: 100px;
+                height: 100px;
+                top: 70%;
+                left:40%;
+            }
+
+        }
+        /*600px up */
+        @media only screen and (min-width:600px){
+            .container {
+                max-width: 540px;
+            }
+            .links-container {
+                max-width: 540px;
+            }
+            header {
+                max-width: 90%;
+            }
+            .img {
+                max-width: 90%;
+            }
+            .icon {
+                width: 100px;
+                height: 100px;
+                top: 70%;
+                left:40%;
+            }
+
+        }
+        /*medium devices*/
+        @media only screen and (min-width: 786px){
+            .container {
+                max-width: 540px;
+            }
+            .links-container {
+                max-width: 540px;
+            }
+        }
+        
+        </style>
+    </head>
+
+    <!--this is where the "website" starts-->
+    <body>
+        <!--content container-->
+        <div class="container">
+            <div class="parent">
+                <div class="top">
+                    <img class="img" src="/" alt="header image"> <!--feel free to remove-->
+                    <img class="icon" src="/" alt="icon">
+                </div>
+            </div>
+        <header>
+            <!--your name here-->
+            <h1>your name</h1>
+            <!--icon here-->
+            <p>your bio here</p>
+            <p>right click and inspect. there's comments left in the html code to help you ^w^</p>
+            </header>
+    
+            <h2>sites</h2>
+            <div class="links-container">
+                <!--links to your works. feel free to add or delete what you need. this is just an example of how links work. go crazy!-->
+                <a class="button" href="">website</a> <!-- target="_blank" opens the link in a new tab-->
+                <a class="button" href="/" target="_blank">portfolio</a>
+                <a class="button" href="/" target="_blank">showreel</a>
+                <a class="button" href="/" target="_blank">shop</a>
+                <a class="button" href="/" target="_blank">commissions</a>
+                <a class="button" href="/" target="_blank">comics</a>
+                <a class="button" href="/" target="_blank">zines</a>
+                <a class="button" href="/" target="_blank">books</a>
+                <a class="button" href="/" target="_blank">podcast</a>
+                <a class="button" href="/" target="_blank">latest game</a>
+                <a class="button" href="/" target="_blank">latest album</a>
+                <a class="button" href="/" target="_blank">latest blog post</a>
+            </div>
+
+            <h2>social media</h2>
+            <div class="links-container">
+                <a class="button" href="/" target="_blank">bsky</a>
+                <a class="button" href="/" target="_blank">tumblr</a>
+                <a class="button" href="/" target="_blank">twitter</a>
+                <a class="button" href="/" target="_blank">instagram</a>
+            </div>
+
+            <h2>contact</h2>
+            <div class="links-container">
+                <!--contact information. i have left options, but please think about getting a "professional"/"business" discord or better yet, set up a business-only email address-->
+                <a class="button" href="/">discord</a>
+                <a class="button" href="/">email</a>
+            </div>
+    
+            <br> <!--this is a line break-->
+            <!--how to embed videos-->
+    
+            <!--youtube-->
+            <!--click share video, click "embed", copy+paste-->
+            <!--OR right click, pick copy embed, paste.-->
+    
+            <!--you can change things, feel free to mess with the width and heights for example-->
+
+            <iframe width="520" height="360" src="https://www.youtube.com/embed/049ywQ3toYU?list=RDlC4nAU1IcMk" title="DRAMAtical Murder OST - Track #16 -  GOATBED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </container>
+        <!--credit, feel free to delete-->
+        <footer>designed -- <a href="https://gg8473.com">gg8473</a></footer>
+    </body>
+</html>

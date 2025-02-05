@@ -1,0 +1,1 @@
+here's a basic html for a link page on your static website. it's mobile friendly. enjoy.
